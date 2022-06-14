@@ -1,0 +1,22 @@
+{
+  "name": "SauceLog",
+  "version": "0.1.0",
+  "summary": "A short description of SauceLog.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zzeung615/SauceLog",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zzeung615": "seung.hee@mobidoo.co.kr"
+  },
+  "source": {
+    "git": "https://github.com/zzeung615/SauceLog.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "SauceLog/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module Pods_SauceLog_Example {
+  umbrella header "Pods-SauceLog_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SauceLog'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SauceLog.'
+  s.summary          = 'Sauce 패밀리의 한눈에! 들어오는 Log를 위한 라이브러리입니다 :D'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/zzeung615/SauceLog'
+  s.homepage         = 'https://MobidooMD.github.io/SauceLog'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zzeung615' => 'seung.hee@mobidoo.co.kr' }
-  s.source           = { :git => 'https://github.com/zzeung615/SauceLog.git', :tag => s.version.to_s }
+  s.author           = { 'seunghee' => 'seung.hee@mobidoo.co.kr' }
+  s.source           = { :git => 'https://github.com/heebedev/SauceLog.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'SauceLog/Classes/**/*'
   

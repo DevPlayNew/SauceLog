@@ -1,0 +1,16 @@
+PODS:
+  - SauceLog (0.1.0)
+
+DEPENDENCIES:
+  - SauceLog (from `../`)
+
+EXTERNAL SOURCES:
+  SauceLog:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SauceLog: e2303fcd619307297eef3191167a45afa548c069
+
+PODFILE CHECKSUM: f4cc53ef2b326c06cdf4e229292d37a241050fba
+
+COCOAPODS: 1.11.3
