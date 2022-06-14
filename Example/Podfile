@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'SauceLog_Example' do
+  pod 'SauceLog', :path => '../'
+
+  target 'SauceLog_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
