@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## SauceLog
 
-Copyright (c) 2022 zzeung615 <seung.hee@mobidoo.co.kr>
+Copyright (c) 2022 heebedev <seung.hee@mobidoo.co.kr>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

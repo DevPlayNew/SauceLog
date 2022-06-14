@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  SauceLog
 //
-//  Created by zzeung615 on 06/14/2022.
-//  Copyright (c) 2022 zzeung615. All rights reserved.
+//  Created by heebedev on 06/14/2022.
+//  Copyright (c) 2022 heebedev. All rights reserved.
 //
 
 import UIKit
