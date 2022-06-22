@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SauceLog'
-  s.version          = '2.0.1'
+  s.version          = '2.0.2'
   s.summary          = 'Sauce 패밀리의 한눈에! 들어오는 Log를 위한 라이브러리입니다 :D'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/MobidooMD/SauceLog.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'SauceLog/Classes/**/*'
   s.swift_version = '4.0'
