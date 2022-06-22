@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SauceLog'
-  s.version          = '0.1.0'
+  s.version          = '2.0.0'
   s.summary          = 'Sauce 패밀리의 한눈에! 들어오는 Log를 위한 라이브러리입니다 :D'
 
 # This description is used to generate tags and improve search results.

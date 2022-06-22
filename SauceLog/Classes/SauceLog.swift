@@ -8,39 +8,55 @@
 import Foundation
 import os.log
 
-enum LogType: String {
-    case Normal = "SAUCELog 🧡 *** Normal"
-    case Network = "SAUCELog 💜 *** Network"
-    case UI = "SAUCELog ❣️ *** UI"
-    case Marketing = "SAUCELog 💚 *** Marketing"
-    case Push = "SAUCELog 💙 Push"
+public enum LogType: String {
+    case Normal = "SAUCELog 🧡 Normal"
+    case Info = "SAUCELog ✏️ Info"
+    case Network = "SAUCELog 🌐 Network"
+    case Error = "SAUCELog ⛔️ Error"
 }
 
-class LogManager: NSObject {
+public class LogManager: NSObject {
     
-    private static let FORCE_LOG = false
+    private static var FORCE_LOG: Bool {
+        
+        guard let forceLog = Bundle.main.infoDictionary?["ForceLog"] as? Bool else {
+            return false
+        }
+        
+        return forceLog
+    }
     
-    static func print(output: Any?, logType: LogType = .Normal, osLogType: OSLogType = .default, file: String = #file, line: Int = #line) {
+    
+    public static func print(output: Any?, logType: LogType = .Normal) {
+        
+        var filename: NSString = #file as NSString
+        filename = filename.lastPathComponent as NSString
+        
+        if FORCE_LOG {
+            if let output = output as? CVarArg {
+                NSLog("[%@] %@ (Line %i) || %@", logType.rawValue, filename, #line, output)
+            }
+        } else {
+            #if DEBUG
+            saucePrint(output: output, osLogType: .default, logType: logType, filename: filename, line: #line)
+            #endif
+        }
+    }
+    
+    public static func print(output: Any?, logType: LogType = .Normal, osLogType: OSLogType = .default, file: String = #file, line: Int = #line) {
         
         var filename: NSString = file as NSString
         filename = filename.lastPathComponent as NSString
         
         if FORCE_LOG {
             if let output = output as? CVarArg {
-                NSLog("%@ : %@ ----- %i Line ----- ::: %@", logType.rawValue, filename, #line, output)
+                NSLog("[%@] %@ (Line %i) || %@", logType.rawValue, filename, #line, output)
             }
         } else {
             #if DEBUG
             saucePrint(output: output, osLogType: osLogType, logType: logType, filename: filename, line: line)
-            #else
-            if #available(iOS 12.0, *) {
-                os_log("", "")
-            } else {
-                Swift.print("")
-            }
             #endif
         }
-        
     }
     
     private static func saucePrint(output: Any?, osLogType: OSLogType, logType: LogType, filename: NSString, line: Int) {
@@ -49,10 +65,10 @@ class LogManager: NSObject {
         
         if #available(iOS 12.0, *) {
             if let output = output as? CVarArg {
-                os_log(osLogType, log: log, "%@ ----- %i Line ----- %@", filename, line, output)
+                os_log(osLogType, log: log, "%@ (Line %i) : %@", filename, line, output)
             }
         } else {
-            Swift.print("SAUCE LOG : \(filename) ----- \(line) Line ----- \n\(output ?? "")")
+            Swift.print("[SAUCE LOG] \(filename) (Line \(line)) : \(output ?? "")")
         }
         
     }
