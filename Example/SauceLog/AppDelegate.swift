@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SauceLog
+
+typealias LogManager = SauceLog
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -43,4 +46,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
